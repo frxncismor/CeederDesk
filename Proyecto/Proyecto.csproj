@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A79C1B0-A681-4CBA-A3E7-371F45054285}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Proyecto</RootNamespace>
+    <AssemblyName>Proyecto</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CEEDERDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CEEDERDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPequeño.cs">
+      <DependentUpon>DataSetPequeño.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPequeño.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPequeño.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetTodo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTodo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdulto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdulto.Designer.cs">
+      <DependentUpon>frmAdulto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAjustes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAjustes.Designer.cs">
+      <DependentUpon>frmAjustes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCacho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCacho.Designer.cs">
+      <DependentUpon>frmCacho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenral.Designer.cs">
+      <DependentUpon>frmGenral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInformacion.Designer.cs">
+      <DependentUpon>frmInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMascota.Designer.cs">
+      <DependentUpon>frmMascota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModAdu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModAdu.Designer.cs">
+      <DependentUpon>frmModAdu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModCaho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModCaho.Designer.cs">
+      <DependentUpon>frmModCaho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModMas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModMas.Designer.cs">
+      <DependentUpon>frmModMas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModoficaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModoficaciones.Designer.cs">
+      <DependentUpon>frmModoficaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMosUsu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMosUsu.Designer.cs">
+      <DependentUpon>frmMosUsu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistro.Designer.cs">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportes.Designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTamaño.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTamaño.Designer.cs">
+      <DependentUpon>frmTamaño.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MiniaturaDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MiniaturaDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteGrande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteGrande.Designer.cs">
+      <DependentUpon>ReporteGrande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteMediano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteMediano.Designer.cs">
+      <DependentUpon>ReporteMediano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePequeño.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportePequeño.Designer.cs">
+      <DependentUpon>ReportePequeño.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesFiltros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportesFiltros.Designer.cs">
+      <DependentUpon>ReportesFiltros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteTodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteTodo.Designer.cs">
+      <DependentUpon>ReporteTodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Usuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Usuarios.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdulto.resx">
+      <DependentUpon>frmAdulto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAjustes.resx">
+      <DependentUpon>frmAjustes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCacho.resx">
+      <DependentUpon>frmCacho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenral.resx">
+      <DependentUpon>frmGenral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInformacion.resx">
+      <DependentUpon>frmInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMascota.resx">
+      <DependentUpon>frmMascota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModAdu.resx">
+      <DependentUpon>frmModAdu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModCaho.resx">
+      <DependentUpon>frmModCaho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModMas.resx">
+      <DependentUpon>frmModMas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModoficaciones.resx">
+      <DependentUpon>frmModoficaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMosUsu.resx">
+      <DependentUpon>frmMosUsu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistro.resx">
+      <DependentUpon>frmRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTamaño.resx">
+      <DependentUpon>frmTamaño.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3Medinanordlc.rdlc" />
+    <EmbeddedResource Include="ReporteGrande.resx">
+      <DependentUpon>ReporteGrande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteMediano.resx">
+      <DependentUpon>ReporteMediano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportePequeño.resx">
+      <DependentUpon>ReportePequeño.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportesFiltros.resx">
+      <DependentUpon>ReportesFiltros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteTodo.resx">
+      <DependentUpon>ReporteTodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportGrande.rdlc" />
+    <EmbeddedResource Include="ReportSize.rdlc" />
+    <EmbeddedResource Include="ReportTodo.rdlc" />
+    <None Include="CEEDERDataSet.xsc">
+      <DependentUpon>CEEDERDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CEEDERDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CEEDERDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CEEDERDataSet.xss">
+      <DependentUpon>CEEDERDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPequeño.xsc">
+      <DependentUpon>DataSetPequeño.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPequeño.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPequeño.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetPequeño.xss">
+      <DependentUpon>DataSetPequeño.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTodo.xsc">
+      <DependentUpon>DataSetTodo.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTodo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTodo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetTodo.xss">
+      <DependentUpon>DataSetTodo.xsd</DependentUpon>
+    </None>
+    <None Include="MiniaturaDataSet3.xsc">
+      <DependentUpon>MiniaturaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MiniaturaDataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MiniaturaDataSet3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MiniaturaDataSet3.xss">
+      <DependentUpon>MiniaturaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Usuarios.xsc">
+      <DependentUpon>Usuarios.xsd</DependentUpon>
+    </None>
+    <None Include="Usuarios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Usuarios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Usuarios.xss">
+      <DependentUpon>Usuarios.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

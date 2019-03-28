@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetPequeño" targetNamespace="http://tempuri.org/DataSetPequeño.xsd" xmlns:mstns="http://tempuri.org/DataSetPequeño.xsd" xmlns="http://tempuri.org/DataSetPequeño.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="CEEDERConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CEEDERConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Proyecto.Properties.Settings.GlobalReference.Default.CEEDERConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PequeñoTableAdapter" GeneratorDataComponentClassName="PequeñoTableAdapter" Name="Pequeño" UserDataComponentName="PequeñoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CEEDERConnectionString (Settings)" DbObjectName="CEEDER.dbo.V_Miniatura" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id_Mascota, Tamaño, Mes, Gramos, Actividad FROM dbo.V_Miniatura</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id_Mascota" DataSetColumn="Id_Mascota" />
+              <Mapping SourceColumn="Tamaño" DataSetColumn="Tamaño" />
+              <Mapping SourceColumn="Mes" DataSetColumn="Mes" />
+              <Mapping SourceColumn="Gramos" DataSetColumn="Gramos" />
+              <Mapping SourceColumn="Actividad" DataSetColumn="Actividad" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetPequeño" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetPequeño" msprop:Generator_UserDSName="DataSetPequeño">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Pequeño" msprop:Generator_TableClassName="PequeñoDataTable" msprop:Generator_TableVarName="tablePequeño" msprop:Generator_TablePropName="Pequeño" msprop:Generator_RowDeletingName="PequeñoRowDeleting" msprop:Generator_RowChangingName="PequeñoRowChanging" msprop:Generator_RowEvHandlerName="PequeñoRowChangeEventHandler" msprop:Generator_RowDeletedName="PequeñoRowDeleted" msprop:Generator_UserTableName="Pequeño" msprop:Generator_RowChangedName="PequeñoRowChanged" msprop:Generator_RowEvArgName="PequeñoRowChangeEvent" msprop:Generator_RowClassName="PequeñoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_Mascota" msprop:Generator_ColumnVarNameInTable="columnId_Mascota" msprop:Generator_ColumnPropNameInRow="Id_Mascota" msprop:Generator_ColumnPropNameInTable="Id_MascotaColumn" msprop:Generator_UserColumnName="Id_Mascota" type="xs:int" />
+              <xs:element name="Tamaño" msprop:Generator_ColumnVarNameInTable="columnTamaño" msprop:Generator_ColumnPropNameInRow="Tamaño" msprop:Generator_ColumnPropNameInTable="TamañoColumn" msprop:Generator_UserColumnName="Tamaño">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mes" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnPropNameInTable="MesColumn" msprop:Generator_UserColumnName="Mes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gramos" msprop:Generator_ColumnVarNameInTable="columnGramos" msprop:Generator_ColumnPropNameInRow="Gramos" msprop:Generator_ColumnPropNameInTable="GramosColumn" msprop:Generator_UserColumnName="Gramos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Actividad" msprop:Generator_ColumnVarNameInTable="columnActividad" msprop:Generator_ColumnPropNameInRow="Actividad" msprop:Generator_ColumnPropNameInTable="ActividadColumn" msprop:Generator_UserColumnName="Actividad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Pequeño" />
+      <xs:field xpath="mstns:Id_Mascota" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
